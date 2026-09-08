@@ -44,7 +44,7 @@ if [ ! -f "/var/www/wp-config.php" ]; then
 
     # Generate random salt text
     generate_salt() {
-        tr -dc 'a-zA-Z0-9!@#%^&*()-_=+[]{}|;:,.<>?' < /dev/urandom | head -c 64
+       tr -dc 'A-Za-z0-9' < /dev/urandom | head -c 64
     }
 
     # Open the PHP tag in the configuration file
